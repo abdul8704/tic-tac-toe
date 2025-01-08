@@ -1,0 +1,58 @@
+/* Body Styling */
+body {
+    font-family: cursive;
+    display: flex;
+    /* flex-direction: ; */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #fff9c4, #ffe082);
+    color: #333;
+}
+
+
+/* Game Container */
+#gameContainer {
+    background-color: #fff59d;
+    border-radius: 15px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);
+    padding: 20px;
+    text-align: center;
+    width: 300px;
+}
+
+/* Title Styling */
+h1 {
+    margin: 0 0 20px;
+    font-size: 2em;
+    color: #aa830f;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Restart Button */
+.mode-button {
+    background-color: #ffca28;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.mode-button:hover {
+    background-color: #fbc02d;
+    transform: scale(1.05);
+}
+
+.mode-button:active {
+    background-color: #f57f17;
+}
+.mode{
+    margin: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
