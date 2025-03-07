@@ -14,7 +14,7 @@ let winPosition = [
 let game = ['', '', '', '', '', '', '', '', '']; //array to represent current board state
 let human = 'X';
 let ai = 'O';
-let currentDifficulty = "easy";
+let currentDifficulty = document.getElementById("difficultySelector").value;
 let currentPlayer = human;
 let waitForAI = false; // Prevents player actions while AI is making a move
 let gameOver = true;   //flag to track endgame
@@ -24,7 +24,6 @@ startGame();
 function changeDifficulty() {
     const difficultySelector = document.getElementById('difficultySelector');
     currentDifficulty = difficultySelector.value;
-    console.log(`Difficulty set to: ${currentDifficulty}`);
     startGame();
 }
 
@@ -44,7 +43,6 @@ function startGame() {  //clears out the current board, reseting to inital state
 
 function cellClicked() {
     let index = this.getAttribute("cellIndex"); // Get the index of the clicked cell
-
     // Ignore clicks while waiting for AI or game is over
     if (game[index] !== '' || waitForAI || gameOver) {
         return;
@@ -113,16 +111,15 @@ function checkTie(board, isSimulated = false) { //similar flag of checkWinner me
 function aiMove(board, currentDifficulty) { 
     setTimeout(() => {
         let aiChoice = '';
-        if(currentDifficulty == "hard"){
+        if(currentDifficulty === "hard"){
             aiChoice = hard_move(board);
         }
-        else if(currentDifficulty == "easy"){
+        else if(currentDifficulty === "easy"){
             aiChoice = easy_move(board);
         } 
-        else if(currentDifficulty = "medium"){
+        else{
             aiChoice = medium_move(board);
-        }
-        
+        }        
         
         let aiCell = cells[aiChoice];
         updateCell(aiCell, aiChoice);
