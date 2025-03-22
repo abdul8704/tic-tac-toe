@@ -1,6 +1,6 @@
 /* Body Styling */
 body {
-    font-family: cursive;
+    font-family: Poppins, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -45,7 +45,7 @@ h1 {
     background-color: #ffee58;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
     line-height: 75px;
-    font-size: 50px;
+    font-size: 40px;
     font-weight: bold;
     text-align: center;
     cursor: pointer;
@@ -61,7 +61,7 @@ h1 {
 /* Status Text */
 #statusText {
     margin: 15px 0;
-    font-size: 1.2em;
+    font-size: 1em;
     color: #444;
 }
 

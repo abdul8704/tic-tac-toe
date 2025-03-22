@@ -1,6 +1,6 @@
 /* Body Styling */
 body {
-    font-family: cursive;
+    font-family: Poppins, sans-serif;
     display: flex;
     /* flex-direction: ; */
     justify-content: center;
